@@ -94,10 +94,7 @@ section.tertiary h3{
     margin-top: 1.5em;
     padding: 0.25em 0 0 0;
 }
-p {
-    font-family: sans-serif;
-    font-size: 1em;
-}
+
 section.tertiary-story h2 {
     border-top: 1.25px solid rgb(244, 241, 229);
     margin-left: 0.5em;
@@ -150,9 +147,6 @@ article h2 {
     padding: 0 1em 0.2em 0;
 }
 
-
-
-
 @media only screen and (min-width: 40em) {
     nav ul li {
     display: inline-block;
@@ -195,7 +189,7 @@ h3.tertiary {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 1em;
     }
-    div.home-container aside{   /* didn't align to the top */
+    div.home-container aside{  
         background: none;
         padding: 0;
         margin-top: 0;
@@ -213,7 +207,7 @@ h3.tertiary {
     div.container aside{   
         margin-top: 0;
     }
-    section.mainstory{         /* image doesn't fill in empty space & text doesn't move */
+    section.mainstory{        
         grid-column: 2/4;
         grid-row: 1/3;
         display: flex; 
@@ -259,10 +253,138 @@ h3.tertiary {
     section.secondary a p{
         flex: 0 0 4em;
     }
-
     /* helped move image */
-    
     section.mainstory img {
         height: 43em;
     }
+}
+
+/*photo gallery start*/ 
+div.photogallery-container{
+    max-width: 60em;
+    margin: 0 auto;
+    padding: 1em;
+}
+div.photogallery-container h2 {
+   margin-bottom: 0.5em;
+   font-size: 1.7em;
+}
+div.photogallery-container figcaption {
+    font-family: "degular-display", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1em;
+}
+div.photogallery-container img{
+    width: 100%;
+    padding: 0.2em 0 0.6em 0;
+}
+input:nth-of-type(1):checked ~ main figure:nth-of-type(1),
+input:nth-of-type(2):checked ~ main figure:nth-of-type(2),
+input:nth-of-type(3):checked ~ main figure:nth-of-type(3),
+input:nth-of-type(4):checked ~ main figure:nth-of-type(4),
+input:nth-of-type(5):checked ~ main figure:nth-of-type(5),
+input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
+input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
+input:nth-of-type(8):checked ~ main figure:nth-of-type(8) {
+    opacity: 1;
+}
+div.photogallery-container input{
+    display: none;
+}
+div.photogallery-container main {
+    position: relative;
+    overflow: hidden;
+    height: 90em;
+}
+div.photogallery-container nav {
+    display: flex;
+    gap: 0.2em;
+    position: relative;
+}
+div.photogallery-container label {
+    cursor: pointer;
+    display: block;
+}
+div.photogallery-container figure{
+    margin: 0;
+    width: calc(100% - 2em);
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s; 
+}
+
+/* Newsletter*/
+div.newsletter-container {
+    max-width: 45em;
+}
+div.newsletter-container h2 {
+    font-family: "guyot-headline", sans-serif;
+    font-weight: 600;
+    font-size: 2em;
+    color: rgb(33, 32, 32);
+    margin-bottom: 0.75em;
+}
+div.newsletter-container form {
+    border-top: 3px solid rgb(225, 32, 36);
+    padding-top: 1em;
+    margin: 1em 0 2em;
+}
+section.personal-info,
+section.content,
+section.suggestions {
+    background: rgb(244, 241, 229);
+    padding: 1.25em;
+    margin-bottom: 1em;
+}
+section.personal-info h2,
+section.content h2,
+section.suggestions h2 {
+    font-size: 1.4em;
+    margin-bottom: 0.75em;
+}
+div.newsletter-container form ul {
+    list-style-type: none;
+}
+div.newsletter-container form li {
+    margin-bottom: 0.75em;
+    font-family: "degular-display", sans-serif;
+}
+section.personal-info label,
+section.content label,
+section.suggestions label {
+    font-family: "degular-display", sans-serif;
+    font-size: 1em;
+    color: rgb(33, 32, 32);
+}
+div.newsletter-container input[type="text"],
+div.newsletter-container input[type="email"], 
+div.newsletter-container input[type="phone"],
+div.newsletter-container textarea {
+    width: 100%;
+    max-width: 24em;
+    padding: 0.45em;
+    margin-top: 0.25em;
+    border: 1px solid rgb(180, 180, 180);
+    font-family: "degular-display", sans-serif;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+div.newsletter-container textarea{
+    max-width: none;
+    min-height: 10em;
+    resize: vertical;
+}
+div.newsletter-container button {
+    background: rgb(225, 32, 36);
+    color: white;
+    border: none;
+    padding: 0.65em 1em;
+    font-family: "aktiv-grotesk", sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+div.newsletter-container button:hover {
+    background: rgb(76, 76, 76);
 }
