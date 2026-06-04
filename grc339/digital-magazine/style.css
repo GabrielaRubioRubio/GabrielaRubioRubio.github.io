@@ -288,6 +288,7 @@ input:nth-of-type(6):checked ~ main figure:nth-of-type(6),
 input:nth-of-type(7):checked ~ main figure:nth-of-type(7),
 input:nth-of-type(8):checked ~ main figure:nth-of-type(8) {
     opacity: 1;
+    position: relative;
 }
 div.photogallery-container input{
     display: none;
@@ -295,8 +296,10 @@ div.photogallery-container input{
 div.photogallery-container main {
     position: relative;
     overflow: hidden;
-    height: 90em;
+    height: auto;
+    min-height: 30em;
 }
+
 div.photogallery-container nav {
     display: flex;
     gap: 0.2em;
@@ -377,7 +380,7 @@ div.newsletter-container textarea{
 }
 div.newsletter-container button {
     background: rgb(225, 32, 36);
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     padding: 0.65em 1em;
     font-family: "aktiv-grotesk", sans-serif;
@@ -387,4 +390,79 @@ div.newsletter-container button {
 }
 div.newsletter-container button:hover {
     background: rgb(76, 76, 76);
+}
+
+/* Alternative Visual Language*/
+@media screen and (prefers-color-scheme: dark) {
+    h1 {  
+        width: 10em;  
+        } 
+    img {  
+        width: 100%;  
+        }  
+     h1 {  
+        background-image: url("the-analytic-atl-vis-language.svg");  
+        background-repeat: no-repeat;  
+        background-size: contain;  
+        }  
+    h1 img {  
+        opacity: 0;  
+        }
+    div.container, div.home-container, div.photogallery-container,
+    div.newsletter-container, header, nav, article {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+        }
+    h2, h3, p,
+    section.personal-info label,
+    section.content label,
+    section.suggestions label {
+        color: rgb(255, 255, 255);
+    }
+    figcaption{
+        color: rgb(171, 169, 169);
+    }
+    aside section.secondary-story,
+    section.personal-info,
+    section.content,
+    section.suggestions {
+        background-color: rgb(33, 32, 32);
+    }
+    nav ul li a {
+        color: rgb(225, 32, 36);
+    }
+    nav a:hover {
+        color: rgb(238, 238, 238);
+    }
+    div.newsletter-container input[type="text"],
+    div.newsletter-container input[type="email"], 
+    div.newsletter-container input[type="phone"],
+    div.newsletter-container textarea {
+        background-color: rgb(250, 250, 250);
+        color: rgb(0, 0, 0);
+        border-color: rgb(85, 85, 85);
+    }
+    div.newsletter-container h2 {
+        color: rgb(250, 250,250);
+    } 
+    body {
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
+    }
+    input, textarea {
+        background-color: rgb(33, 32, 32);
+        color: rgb(255, 255, 255);
+        border: 1px solid rgb(85, 85, 85);
+    }
+    input::placeholder,
+    textarea::placeholder {
+        color: rgb(180, 180, 180);
+    }
+    button {
+        background-color: rgb(225, 32, 36);
+        color: rgb(255, 255, 255);
+    }
+    button:hover {
+        background-color: rgb(244, 241, 229);
+    }
 }
