@@ -413,12 +413,15 @@ div.newsletter-container button:hover {
         background-color: rgb(30, 30, 30);
         color: rgb(255, 255, 255);
         }
-    h2, h3, p,
+    p,
     section.personal-info label,
     section.content label,
     section.suggestions label {
         color: rgb(255, 255, 255);
     }
+	h2, h3{
+		color: rgb(255, 32, 36);
+	}	
     figcaption{
         color: rgb(171, 169, 169);
     }
